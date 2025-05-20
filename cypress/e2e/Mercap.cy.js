@@ -27,6 +27,7 @@ describe('Pruebas del login', () => {
   it("Ingreso al sitio con un usuario y contraseña inválidos", () => {
     cy.get('#username').type('abb@gmail.com');
     cy.get('#password').type('1234');
+    cy.get('button[data-action-button-primary="true"]').click();
     //Debería hacer una aserción de que se muestra un mensaje de error
   })
 
